@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- 航空公司 -->
+            <!--Logo-->
+
+            <!-- 航班 / 登機門 -->
+            <TextView
+                android:id="@+id/tvAirLine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="長榮航空"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivAirlineLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivAirlineLogo"
+                app:layout_constraintTop_toTopOf="@+id/ivAirlineLogo" />
+
+            <ImageView
+                android:id="@+id/ivAirlineLogo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvFlightCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="航機班號：768"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/ivAirlineLogo"
+                app:layout_constraintTop_toBottomOf="@+id/ivAirlineLogo" />
+
+            <!-- 航廈 / 登機門 -->
+            <TextView
+                android:id="@+id/tvFlightNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="航廈/登機門：01/A9"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvFlightCode"
+                app:layout_constraintStart_toStartOf="@+id/tvFlightCode"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlightCode" />
+
+
+            <!-- 預計 / 實際時間 -->
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/tvFlightNumber"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlightNumber">
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvExpectTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="6dp"
+                android:text="預計時間\nHH:mm"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/line1"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlightNumber" />
+
+
+            <TextView
+                android:id="@+id/tvRealTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="實際時間\nHH:mm"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvExpectTime"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlightNumber" />
+
+            <!-- 狀態 (如 DEPARTED / CANCELLED 等) -->
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="出發 DEPARTED"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvExpectTime" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:text=""
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="140dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvUpAirport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="MZG\n澎湖"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="255dp"
+                tools:layout_editor_absoluteY="98dp" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="8dp"
+                tools:layout_editor_absoluteX="255dp"
+                tools:layout_editor_absoluteY="98dp" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="255dp"
+                tools:layout_editor_absoluteY="98dp" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="8dp"
+                tools:layout_editor_absoluteX="255dp"
+                tools:layout_editor_absoluteY="98dp" />
+
+            <TextView
+                android:id="@+id/tvDownAirport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="TPE\n桃園國際機場"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="255dp"
+                tools:layout_editor_absoluteY="98dp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/llCalculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 計算結果或輸入的顯示區 -->
+        <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="50dp"
+            android:textColor="@android:color/black"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:text="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- 使用 GridLayout 來排列按鈕 -->
+        <GridLayout
+            android:padding="16dp"
+            android:id="@+id/glCalculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="5"
+            android:useDefaultMargins="true"
+            android:alignmentMode="alignMargins"
+            android:gravity="center">
+            <!-- 第一排 -->
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="3"
+                android:backgroundTint="#E8E7E7"
+                android:text="DEL"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnDivide"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="÷"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <!-- 第二排 -->
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="7"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="8"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="9"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnMultiply"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="×"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <!-- 第三排 -->
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="6"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <!-- 第四排 -->
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <!-- 第五排 -->
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnDot"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="."
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnCE"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="C"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnEqual"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E8E7E7"
+                android:text="="
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+        </GridLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

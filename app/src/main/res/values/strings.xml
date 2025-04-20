@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FlightDemo</string>
+    <string-array name="flight_type_array">
+        <item>國際線</item>
+        <item>國內線</item>
+    </string-array>
+</resources>

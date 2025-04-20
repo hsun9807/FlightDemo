@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 設定背景色 -->
+    <solid android:color="@color/white"/>
+    <!-- 設定角半徑，依據 BottomNavigationView 的高度選擇合適值，使它呈現橢圓形外觀 -->
+    <corners android:radius="30dp"/>
+</shape>
